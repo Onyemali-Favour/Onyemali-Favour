@@ -1,0 +1,78 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.logo{
+    width: 100px;
+    border-radius: 150%;
+
+    height: 100px;
+
+}
+.menu{
+    display: flex;
+    gap: 30px;
+}
+.menu a{
+    text-decoration: none;
+    color:#000;
+    font-size: 14px;
+}
+.btn-group{
+    display: flex;
+    gap: 30px;
+}
+
+.btn-group button:nth-child(1){
+    background:darkred;
+    color: white;
+    border: none;
+    border-top-left-radius: 20px ;
+    border-bottom-right-radius: 20px;
+    width: 200px;
+    height: 50px;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex start;
+    margin: 135px 30px;
+}
+body{
+    background: url(./images/background\ 2.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  color: #333;
+}
+
+.start-btn, button {
+  background: darkred;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 20px;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.question {
+  margin-bottom: 20px;
+  text-align: left;
+}

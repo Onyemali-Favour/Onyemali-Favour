@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Friendship Quiz</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function submitQuiz() {
+      let score = 0;
+
+      const answers = {
+        q1: "b",
+        q2: "a",
+        q3: "c"
+      };
+
+      for (let q in answers) {
+        const selected = document.querySelector(`input[name="${q}"]:checked`);
+        if (selected && selected.value === answers[q]) {
+          score++;
+        }
+      }
+
+      const result = document.getElementById("result");
+      result.innerText = `You scored ${score}/3! ${score === 3 ? "You really know your friend!" : "Keep learning about your friend!"}`;
+
+      return false; // prevent page reload
+    }
+  </script>
+</head>
+<body>
+  <nav class="navbar">
+        <img src="./images/IMG-20250524-WA0196(1).jpg" class="logo">
+
+            
+            
+         
+
+
+
+       <div class="btn-group">
+        <a href= "index.html"><button> HOME</button></a>
+         </div>
+    </nav>
+  <div class="container">
+    <h1>Friendship Quiz</h1>
+    <form onsubmit="return submitQuiz();">
+      <div class="question">
+        <p>1. What's your Friend's Favourite Ice-cream flavour ?</p>
+        <label><input type="radio" name="q1" value="a"> Vanilla</label><br>
+        <label><input type="radio" name="q1" value="b"> Strawberry</label><br>
+        <label><input type="radio" name="q1" value="c"> Chocolate</label>
+      </div>
+
+      <div class="question">
+        <p>2. What's their favourite movie genre ?</p>
+        <label><input type="radio" name="q2" value="a"> Romance</label><br>
+        <label><input type="radio" name="q2" value="b"> Action</label><br>
+        <label><input type="radio" name="q2" value="c"> Anime</label>
+      </div>
+
+      <div class="question">
+        <p>3. What’s your friend's favourite pet ?</p>
+        <label><input type="radio" name="q3" value="a"> Dog</label><br>
+        <label><input type="radio" name="q3" value="b"> Cat</label><br>
+        <label><input type="radio" name="q3" value="c"> Rabbit</label>
+      </div>
+
+      <button type="submit">Submit</button>
+      <p id="result"></p>
+    </form>
+  </div>
+</body>
+</html>
